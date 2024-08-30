@@ -1,0 +1,101 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+/* Main Style */
+body{
+    font-family:'Poppins', sans-serif;
+    color:#000;
+    display:grid;
+    place-items:center;
+    padding:25px;
+    background:url('https://i.pinimg.com/originals/25/37/e7/2537e736565e7e17808ce05c77e9b134.jpg') center / cover;
+}
+
+.login-card{
+    width:100%;
+    max-width:500px;
+    margin:0 20px;
+    padding:70px 30px 45px;
+    background-color:#fff5;
+    backdrop-filter:blur(7px);
+    box-shadow:0.4rem .8rem #0005;
+    text-align:center;
+    border-radius:1.25rem;
+}
+
+.login-card > h2{
+    font-size: 36px;
+    font-weight:600;
+    margin:0 0 12px;
+}
+
+.login-card > h3{
+    margin: 0 0 30px;
+    font-weight:500;
+    font-size:1rem;
+}
+
+.login-form{
+    width:100%;
+    margin:0;
+    display:grid;
+    gap:16px;
+}
+
+.login-form > input{
+    width: 100%;
+    height:50px;
+    border:2px solid #ebebeb;
+    font-size:16px;
+    padding:0 16px;
+    border-radius:0.5rem;
+}
+
+.login-form > input[type="text"], .login-form > input[type="password"]{
+    opacity:0.6;
+}
+
+.warn{
+    color:red;
+    margin-bottom:10px;
+}
+
+.error-input{
+    outline:2px solid red;
+    background-color:ivory;
+}
+
+.login-form a{
+    color:#f9f9f9;
+    font-size:1rem;
+    text-align:center;
+    text-decoration:none;
+    margin-bottom:6px;
+}
+
+.login-form a:hover{
+    text-decoration:underline;
+    color:#721c24;
+}
+
+.login-form > input[type="submit"]{
+    cursor:pointer;
+    border-radius:0.5rem;
+    background:none;
+    opacity:0.7;
+    color:#f9f9f9;
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+.login-form > input[type="submit"]:hover{
+        background-color:#14A44D;
+}

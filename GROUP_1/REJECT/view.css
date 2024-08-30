@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:sans-serif;
+}
+
+
+
+body{
+    background:url("https://i.pinimg.com/originals/37/44/82/374482be2ddf158ba7a01037d6576fae.jpg") center / cover;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+section{
+    background-color:#fff5;
+    backdrop-filter:blur(7px);
+    padding:1.8rem;
+    max-width:768px;
+    width:100%;
+    text-align:center;
+}
+
+/* Styling for account icons */
+.account-icons a {
+    display: inline-block; 
+    margin-right:3px; 
+}
+
+/* Styling for the icons themselves */
+.account-icons i, .account-icons img {
+    width: 20px; 
+    height: 20px; 
+    vertical-align: middle; 
+}
