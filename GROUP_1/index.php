@@ -182,7 +182,7 @@ if(!isset($_SESSION['username'])){
         </form>
     </div>
 </div>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     const addNewBtn = document.querySelector('.add-new-btn');
     const modal = document.querySelector('.modal-container');
@@ -238,6 +238,30 @@ if(!isset($_SESSION['username'])){
    
     closeModal.addEventListener('click', function() {
         modal.style.display = 'none';
+    });
+
+     $(document).ready(function() {
+        $('#member-form').on('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const formData = new FormData(this); // Create FormData object
+
+            $.ajax({
+                url: 'upload.php', // URL to send the form data to
+                type: 'POST',
+                data: formData,
+                contentType: false, // Important for file upload
+                processData: false, // Important for file upload
+                success: function(response) {
+                    alert('Member details submitted successfully!');
+                    modal.style.display = 'none'; // Close the modal
+                    location.reload(); // Reload the page to see changes
+                },
+                error: function(xhr, status, error) {
+                    alert('An error occurred: ' + error);
+                }
+            });
+        });
     });
 </script>
 </body>
