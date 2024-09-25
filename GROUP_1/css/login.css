@@ -68,6 +68,10 @@ body{
     margin-bottom:10px;
 }
 
+#error-message{
+    display:none;
+}
+
 .error-input{
     outline:2px solid red;
     background-color:ivory;
