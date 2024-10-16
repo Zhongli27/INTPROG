@@ -19,6 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($username == trim($data[1]) && $password == trim($data[2])) {
             $_SESSION['username'] = $username;
+
+            // Set a cookie that lasts for 1 hour
+            setcookie("username", $username, time() + 3600, "/");
+
+            
             echo json_encode(['success' => true]);
             fclose($file);
             exit;
