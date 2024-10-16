@@ -1,6 +1,9 @@
 <?php include_once 'header.php';?>
 <body>
-
+<script type="text/javascript">
+        var message = "<?php echo $welcomeMessage; ?>";
+        alert(message); // Show the welcome message in a popup alert
+</script>
 
 <header class="header">
     <nav class="navbar">
